@@ -22,4 +22,6 @@ public class Movement {
 
     @Enumerated(EnumType.STRING)
     private MovementType movementType;
+
+    private Integer accountId;
 }
