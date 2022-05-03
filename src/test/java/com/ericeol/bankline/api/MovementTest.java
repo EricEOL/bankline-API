@@ -14,11 +14,23 @@ public class MovementTest {
     MovementService movementService;
 
     @Test
-    void add() {
+    void addDespesa() {
         MovementDTO movementDTO = new MovementDTO(
                 "Compra de panda",
                 220.0,
                 MovementType.DESPESA,
+                1
+        );
+
+        movementService.add(movementDTO);
+    }
+
+    @Test
+    void addReceita() {
+        MovementDTO movementDTO = new MovementDTO(
+                "Compra de panda",
+                220.0,
+                MovementType.RECEITA,
                 1
         );
 
