@@ -28,6 +28,11 @@ public class MovementController {
         return movementRepository.findAll();
     }
 
+    @GetMapping("/{accountId}")
+    public List<Movement> movementByAccountId(@PathVariable Integer accountId) {
+        return movementRepository.findByAccountId(accountId);
+    }
+
     @PostMapping
     public void add(@RequestBody MovementDTO movementDTO) {
         movementService.add(movementDTO);
